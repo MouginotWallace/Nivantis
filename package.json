@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@quasar/extras": "^1.0.0",
+    "firebase": "^7.15.3",
     "quasar": "^1.0.0",
     "save": "^2.4.0",
     "vue-resource": "^1.5.1",

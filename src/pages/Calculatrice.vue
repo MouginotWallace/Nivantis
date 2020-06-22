@@ -130,14 +130,17 @@ export default {
 
   mounted () {
     this.tab = produits.medicament;
-    this.$store.dispatch('setProduits')
+    this.$store.dispatch('getAllProduits')
   },
 
   computed:{
+    getProduits() {
+      return this.$store.getters.getProduits
+    },
 		filteredMedecin: function() {
 			let medecin = this.searchQuery;
-				return this.tab.filter(function(medicament) {
-					return medicament.nom.indexOf(medecin) > -1;
+				return this.getProduits.filter(function(produits) {
+					return produits.nom.indexOf(medecin) > -1;
 				});
     },
 

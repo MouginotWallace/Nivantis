@@ -1,9 +1,6 @@
 <template>
   <q-page padding>
     <!-- content -->
-    <ul v-for="val in tab" :key="val.id">
-      <li>{{val.nom}}</li>
-      <li>{{val.prix}}</li>
       <hr>
     </ul>
   </q-page>
@@ -19,7 +16,9 @@ export default {
     }
   },
   mounted () {
-    this.tab = produits.medicament
+    //this.$store.dispatch('getAllProduits')
+  },
+  computed: {
   }
 }
 </script>

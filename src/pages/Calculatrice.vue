@@ -27,7 +27,7 @@
                   </div>
               </div>
 
-              
+
 
           </div>
 
@@ -44,7 +44,7 @@
             </q-field>
           </div>
 
-          
+
 
           <div class="calc-item">
             <q-item-label>
@@ -69,7 +69,7 @@
           </div>
 
 
-          
+
 
           <div class="calc-item">
             <q-item-label>
@@ -81,7 +81,7 @@
               </template>
             </q-field>
           </div>
-    
+
         </div>
 
         <div class="col-6 col-md-4 calc-block ">
@@ -92,7 +92,7 @@
               </q-item-label>
               <q-input  type="number" v-model="R" color="amber-8" filled>€</q-input>
             </div>
-            
+
             <div class="calc-item">
               <q-item-label>
                 Marge
@@ -105,7 +105,7 @@
       </div>
     </div>
   </q-page>
-  
+
 </template>
 
 <script>
@@ -127,9 +127,10 @@ export default {
 
     }
   },
-  
+
   mounted () {
     this.tab = produits.medicament;
+    this.$store.dispatch('setProduits')
   },
 
   computed:{
@@ -137,10 +138,10 @@ export default {
 			let medecin = this.searchQuery;
 				return this.tab.filter(function(medicament) {
 					return medicament.nom.indexOf(medecin) > -1;
-				});	
+				});
     },
 
-   
+
 
     PAN: function(){
       return (+this.PAB)-(+this.R)
@@ -154,7 +155,7 @@ export default {
       return (+this.PVN)/(+this.PAN)
     },
 	},
-  
+
 }
 </script>
 <style>
@@ -221,7 +222,7 @@ export default {
   }
 
   /*RADIO*/
-  
+
 
 
 </style>

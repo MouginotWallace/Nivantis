@@ -24,6 +24,7 @@
                         <p class="med-prix">{{med.prix}}€/brut</p>
                       <hr/>
                     </div>
+                    </div>
                   </div>
               </div>
 
@@ -101,8 +102,6 @@
             </div>
 
           </div>
-
-      </div>
     </div>
   </q-page>
 
@@ -110,14 +109,13 @@
 
 <script>
 
-import produits from 'src/data/produits'
-
 export default {
   // name: 'PageName',
 
   data () {
     return {
       searchQuery:'',
+      produits:'',
       tab: [],
       TDR: 0,
       R:0,
@@ -129,12 +127,13 @@ export default {
   },
 
   mounted () {
-    this.tab = produits.medicament;
     this.$store.dispatch('getAllProduits')
+    this.tab = this.getProduits
   },
 
   computed:{
     getProduits() {
+
       return this.$store.getters.getProduits
     },
 		filteredMedecin: function() {

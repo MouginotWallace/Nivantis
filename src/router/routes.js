@@ -11,6 +11,10 @@ const routes = [
         component: () => import('pages/Calculatrice.vue')
       },
       {
+        path: '/Formulaire',
+        component: () => import('pages/Formulaire.vue')
+      },
+      {
         path: '/teste',
         component: () => import('pages/Teste.vue')
       }

@@ -46,7 +46,7 @@ export default {
             { reponse: "Non", checked: false },
             { reponse: "Ne sait pas", checked: false },
           ] },
-        { question: "Est-ce que vous proposez nos produits aux clients spontanément ?", reponses: [
+        { question: "Est-ce que vous proposez nos produits aux client spontanément ?", reponses: [
             { reponse: "Oui", checked: false },
             { reponse: "Non", checked: false },
             { reponse: "Ne sait pas", checked: false },

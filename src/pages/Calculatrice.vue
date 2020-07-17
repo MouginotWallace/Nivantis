@@ -129,6 +129,7 @@ export default {
   mounted () {
     this.$store.dispatch('getAllProduits')
     this.tab = this.getProduits
+      //this.$store.dispatch("creerAchat")
   },
 
   computed:{

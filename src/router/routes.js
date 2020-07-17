@@ -22,6 +22,14 @@ const routes = [
         path: '/Map',
         component: () => import('pages/Map.vue')
       },
+      {  
+        path: '/pharmacie',
+        component: () => import('pages/Pharmacie.vue')
+      },
+      {
+        path: '/question',
+        component: () => import('pages/Question.vue')
+      }
     ]
   }
 ]

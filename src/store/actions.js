@@ -1,6 +1,7 @@
 import {firebasedb} from "boot/firebase";
 
 export default {
+  // ----------------Produits--------------------------
   getAllProduits({commit}) {
     firebasedb.database().ref('produits').once('value')
       .then((data) => {
@@ -133,6 +134,52 @@ export default {
       //commit('setProduits',data)
     }).catch((error)=> {
       console.log(error)
+    })
+  },
+  //----------------------------------Client------------------------------------------------
+  creerClient({commit}, payload) {
+    firebasedb.database().ref('client').push(payload.client)
+      .then((data)=> {
+        console.log('ok')
+        commit('setClient')
+      }).catch(error =>{
+        console.log(error)
+    })
+  },
+  //--------------------------------Formations-----------------------------------
+    creerFormation ({commit}, payload) {
+    },
+  creerVisite ({commit}, payload) {
+    const visite= [{
+      date: '23/06/2020'
+    }]
+    firebasedb.database().ref('visite').push(visite)
+      .then((data) => {
+        console.log('ok')
+      }).catch(error =>{
+        console.log(error)
+    })
+  },
+  //--------------------------------Achat-----------------------------------------------------
+
+  creerAchat ({commit}, payload) {
+    const achat= [
+      {
+        idClient: 3,
+        idProduit:  6,
+        Qty: 35
+      },
+      {
+        idClient: 1,
+        idProduit:  24,
+        Qty: 15
+      }
+    ]
+    firebasedb.database().ref('achat').push(achat)
+      .then(data => {
+        console.log('cool')
+      }).catch(error => {
+        console.log(error)
     })
   }
 }

@@ -2,21 +2,14 @@
   <q-layout view="lHh Lpr lFf">
     <div class="q-pa-md" style="padding: 0">
     <q-layout view="lHh lpr lFf" container style="min-height: 100vh" class="shadow-2 rounded-borders">
-      <q-header bordered class="bg-white text-primary">
-        <q-toolbar>
-          <q-toolbar-title class="text-center">
-            <q-avatar>
-              <img src="https://cdn.quasar.dev/logo/svg/quasar-logo.svg">
-            </q-avatar>
-            Quasar Framework
-          </q-toolbar-title>
-        </q-toolbar>
-      </q-header>
+      
 
       <q-footer bordered class="bg-white text-primary">
         <q-tabs no-caps active-color="primary" indicator-color="transparent" class="text-grey" v-model="tab">
           <router-link  to="/Calculatrice"><q-tab name="Calculatrice" label="Calculatrice"/></router-link>
           <router-link  to="/Map"><q-tab name="Map" label="Map"/></router-link>
+          <router-link  to="/pharmacie"><q-tab name="Pharmacie" label="Pharmacie"/></router-link>
+          <router-link  to="/Formulaire"><q-tab name="Formulaire" label="Formulaire"/></router-link>
         </q-tabs>
       </q-footer>
 
@@ -92,3 +85,8 @@ export default {
   }
 }
 </script>
+<style scoped>
+  .logo{
+    max-height: 5vh;
+  }
+</style>

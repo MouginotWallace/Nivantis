@@ -1,3 +1,8 @@
 export  default {
-  produit: []
+  produit: [],
+  client: [],
+  formations: [],
+  vente: [],
+  visite: [],
+  achat: []
 }

@@ -17,7 +17,11 @@ const routes = [
       {
         path: '/teste',
         component: () => import('pages/Teste.vue')
-      }
+      },
+      {
+        path: '/Map',
+        component: () => import('pages/Map.vue')
+      },
     ]
   }
 ]

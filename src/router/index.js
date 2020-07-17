@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
-
 import routes from './routes'
 
 Vue.use(VueRouter)
@@ -9,9 +8,15 @@ Vue.use(VueResource)
 
 
 
+  //Device ready
+  
+
+
+
 /*
  * If not building with SSR mode, you can
  * directly export the Router instantiation;
+ * 
  *
  * The function below can be async too; either use
  * async/await or return a Promise which resolves

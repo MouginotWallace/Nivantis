@@ -15,14 +15,13 @@
 
       <q-footer bordered class="bg-white text-primary">
         <q-tabs no-caps active-color="primary" indicator-color="transparent" class="text-grey" v-model="tab">
-          <router-link  to="/Calculatrice"><q-tab name="Calculatrice" label="Images"/></router-link>
-          <q-tab name="videos" label="Videos" />
-          <q-tab name="articles" label="Articles" />
+          <router-link  to="/Calculatrice"><q-tab name="Calculatrice" label="Calculatrice"/></router-link>
+          <router-link  to="/Map"><q-tab name="Map" label="Map"/></router-link>
         </q-tabs>
       </q-footer>
 
       <q-page-container style="padding: 0">
-        <q-page class="q-pa-md">
+        <q-page class="q-pa-md" style="padding-left: 0">
           <router-view />
         </q-page>
       </q-page-container>

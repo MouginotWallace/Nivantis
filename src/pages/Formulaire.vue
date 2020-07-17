@@ -25,7 +25,7 @@
         </div>
 
         <div class="row flex justify-center">
-          <q-btn label="Submit" class="col col-4 offset-8" type="submit" color="primary"/>
+          <q-btn label="Submit" class="col col-4 offset-8" color="primary"/>
         </div>
       </q-form>
     </div>
